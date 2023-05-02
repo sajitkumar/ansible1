@@ -1,7 +1,7 @@
 ---
 - name: nginx install
-  hosts: 13.233.214.219
-  become: root
+  hosts: all
+  become: yes
   
   tasks:
   apt:
