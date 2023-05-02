@@ -1,6 +1,6 @@
 ---
 - name: nginx install
-  hosts: all
+  hosts: 13.233.214.219
   become: root
   
   tasks:
