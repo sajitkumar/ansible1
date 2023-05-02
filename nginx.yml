@@ -1,1 +1,11 @@
-
+---
+- name: nginx install
+  hosts: all
+  become: root
+  
+  tasks:
+  apt:
+  - name: nginx
+    state: latest
+    
+   
