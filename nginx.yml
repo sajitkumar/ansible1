@@ -4,8 +4,9 @@
   become: yes
   
   tasks:
-  apt:
   - name: nginx
-    state: latest
+    apt:
+      name:nginx
+      state: latest
     
    
