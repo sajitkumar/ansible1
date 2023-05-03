@@ -6,7 +6,7 @@
   tasks:
   - name: nginx
     apt:
-      name:nginx
+      name: nginx
       state: latest
     
    
