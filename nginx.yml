@@ -7,5 +7,5 @@
   - name: nginx
     apt:
       name: nginx
-      state: absent
+      state: present
    
