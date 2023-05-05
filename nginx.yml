@@ -7,5 +7,5 @@
   - name: nginx
     apt:
       name: nginx
-      state: present
+      state: latest
    
