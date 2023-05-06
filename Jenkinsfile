@@ -11,5 +11,10 @@ pipeline{
                 ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'jenkins.yml'
             }
         }
+        stage('Execute Playbook on slave){
+              steps{
+                  ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'slave.yml'
+            }
+        }
     }
 }
