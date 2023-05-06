@@ -1,0 +1,10 @@
+--- 
+- name: Update sshd_config
+  hosts: all
+  become: true
+  tasks:
+    - name: Replace PasswordAuthentication line in sshd_config
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^PasswordAuthentication yes'
+        line: 'PasswordAuthentication no'
