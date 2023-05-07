@@ -1,13 +1,11 @@
 ---
-- name: Update sshd_config
+- name: 
   hosts: all
   become: true
   tasks:
-    - name: Replace PasswordAuthentication line in sshd_config
-      lineinfile:
-        path: /etc/ssh/sshd_config
-        regexp: 'PasswordAuthentication no'
-        line: 'PasswordAuthentication yes'
-    - name: Reload sshd
-      command: service sshd reload
-    
+    - name: install java
+      command: yum install java-11-openjdk-devel -y
+    - name: Create directory
+      file:
+        path: /opt/slave
+        state: directory  
