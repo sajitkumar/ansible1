@@ -1,6 +1,6 @@
 ---
 - name: install jenkins
-  hosts: all
+  hosts: 13.235.244.152
   become: yes
 
   tasks:
