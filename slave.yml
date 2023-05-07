@@ -9,9 +9,7 @@
         regexp: 'PasswordAuthentication no'
         line: 'PasswordAuthentication yes'
     - name: Reload sshd
-      service:
-        name: sshd
-        state: reloaded
+      command: service sshd reload
     - name: Create directory /opt
       file:
         path: /opt/jenkins
