@@ -1,4 +1,4 @@
---- 
+---
 - name: Update sshd_config
   hosts: all
   become: true
@@ -6,6 +6,14 @@
     - name: Replace PasswordAuthentication line in sshd_config
       lineinfile:
         path: /etc/ssh/sshd_config
-        regexp: '^PasswordAuthentication yes'
-        line: 'PasswordAuthentication no'
-      
+        regexp: ^#PasswordAuthentication yes
+        line: PasswordAuthentication no
+    - name: Reload sshd
+      service:
+        name: httpd
+        state: reloaded
+    - name: Create directory /opt
+      file:
+        path: /opt/jenkins
+        state: directory
+        mode: "0777"
