@@ -8,3 +8,7 @@
         path: /etc/ssh/sshd_config
         regexp: '^PasswordAuthentication yes'
         line: 'PasswordAuthentication no'
+    - name: Reload SSHD service
+      systemd:
+        name: sshd
+        state: reloaded    
