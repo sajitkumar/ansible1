@@ -6,10 +6,15 @@ pipeline{
                 git branch:'main', url: 'https://github.com/sajitkumar/ansible1.git'
             }
         }
-        stage('Execute Playbook on slave'){
+        stage('Execute Playbook on node1'){
               steps{
-                  ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'slave.yml'
+                  ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'jenkins.yml'
             }
         }
+        stage('Execute playbook on node2'){
+            steps{
+                ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'slave.yml'
+            } 
+        }    
     }
 }
