@@ -10,7 +10,7 @@
         line: PasswordAuthentication no
     - name: Reload sshd
       service:
-        name: httpd
+        name: sshd
         state: reloaded
     - name: Create directory /opt
       file:
