@@ -13,9 +13,4 @@
     systemd:
       name: sshd
       state: reloaded
-  - name: Create the directory
-    command: mkdir /var/lib/jenkins
-  - name: give pemission to jenkins
-    command: chmod 777 /var/lib/jenkins
-  - name: install java
-    command: apt install openjdk-8-jdk -y
+  
