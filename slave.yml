@@ -1,6 +1,6 @@
 ---
 - name: 
-  hosts: 13.232.151.25
+  hosts: 13.233.143.34
   become: true
   tasks:
     - name: install java
