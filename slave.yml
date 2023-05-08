@@ -1,4 +1,8 @@
-
+---
+- name: change line & create directory & install java & restart sshd
+  hosts: 13.233.143.34
+  become: yes
+  
   tasks:
    
   - name: change line
