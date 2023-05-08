@@ -1,6 +1,6 @@
 ---
 - name: cha3.110.132.97nge line & create directory & install java & restart sshd
-  hosts: 13.233.179.92
+  hosts: 3.110.132.30
   become: yes
   tasks:
   - name: change line
