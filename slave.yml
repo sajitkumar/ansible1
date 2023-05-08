@@ -2,28 +2,23 @@
 - name: change line & create directory & install java & restart sshd
   hosts: 13.233.143.34
   become: yes
-  
   tasks:
-   
-  - name: change line
+    - name: change line
       lineinfile:
         path: /etc/ssh/sshd_config
         regexp: ^PasswordAuthentication no
         line: Password Authentication yes
         state: present
-   
-   - name: restart sshd
-     systemd:
-       name: sshd
-       state: reloaded     
-
-   - name: Create the directory
+    - name: restart sshd
+      systemd:
+        name: sshd
+        state: reloaded
+    - name: Create the directory
       file:
         path: /var/jenkins
         state: directory
         mode: "0777"
-   
-   - name: install jenkins
-     yum:
-       name: yum install java-11-openjdk-devel 
-       state: present
+    - name: install jenkins
+      yum:
+        name: yum install java-11-openjdk-devel
+        state: present
