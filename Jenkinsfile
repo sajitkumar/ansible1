@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Execute playbook on node2'){
             steps{
-                ansiblePlaybook credentialsId: 'ansible1', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'jenkins.yml' "ansible_sudo_pass=ansadmin"
+                ansiblePlaybook credentialsId: 'ansible1', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'jenkins.yml' 
             } 
         }    
     }
