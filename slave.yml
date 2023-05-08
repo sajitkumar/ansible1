@@ -10,7 +10,7 @@
       line: Password Authentication yes
       state: present
   - name: restart sshd
-      systemd:
+    systemd:
       name: sshd
       state: reloaded
   - name: Create the directory
