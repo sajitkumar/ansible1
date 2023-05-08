@@ -14,7 +14,7 @@
       name: sshd
       state: reloaded
   - name: Create the directory
-    command: mkdir /opt/jenkins
+    command: mkdir /var/jenkins
   - name: give pemission to jenkins
     command: chmod 777 /opt/jenkins
   - name: install java
