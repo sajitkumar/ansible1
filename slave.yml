@@ -6,7 +6,7 @@
     - name: change line
       lineinfile:
         path: /etc/ssh/sshd_config
-        regexp: ^PasswordAuthentication no
+        regexp: '^PasswordAuthentication no'
         line: Password Authentication yes
         state: present
     - name: restart sshd
