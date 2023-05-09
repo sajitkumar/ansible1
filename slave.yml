@@ -12,9 +12,6 @@
       systemd:
         name: sshd
         service: reloaded
-    - name: create a directory
-      command: mkdir /opt/jenkins
-      ignore_errors: yes
     - name: give permission to jenkins
       command: chmod 777 /opt/jenkins
     - name: install java
