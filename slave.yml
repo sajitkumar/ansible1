@@ -5,7 +5,7 @@
     - name: update system
       command: apt update
     - name: make directory
-      command: /opt/jenkins
+      command: mkdir /opt/jenkins
     - name: give permission
       command: chmod 777 /opt/jenkins
     - name: install java
