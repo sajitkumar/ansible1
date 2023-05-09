@@ -2,16 +2,10 @@
   hosts: all
   become: true
   tasks:
-    - name: Enable password authentication
-      lineinfile:
-        path: /etc/ssh/sshd_config
-        regexp: 'PasswordAuthentication no'
-        line: 'PasswordAuthentication yes'
-        state: present
-    - name: start sshd
-      systemd:
-        name: sshd
-        service: reloaded
+    - name: make directory
+      command: /opt/jenkins
+    - name: give permission
+      command: chmod 777 /opt/jenkins
     - name: install java
       command: apt install openjdk-8-jdk -y
     - name: install java
