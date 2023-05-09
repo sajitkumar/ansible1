@@ -1,7 +1,7 @@
 pipeline{
     agent any
     parameters{
-        choice(name: 'PLAYBOOK', choices: ['jenkins.yml'], description: 'select the palybook to execute')
+        choice(name: 'PLAYBOOK', choices: ['nginx.yml'], description: 'select the palybook to execute')
     }    
     stages{
         stage('SCM Checkout'){
@@ -16,3 +16,4 @@ pipeline{
         }    
     }
 }
+
