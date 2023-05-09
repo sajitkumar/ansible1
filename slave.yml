@@ -1,4 +1,4 @@
-- name: Update SSH configuration
+- name: slave configuration
   hosts: all
   become: true
   tasks:
