@@ -16,5 +16,9 @@
       command: mkdir /opt/jenkins
     - name: give permission to jenkins
       command: chmod 777 /opt/jenkins
+    - name: install java
+      command: apt install openjdk-8-jdk -y
+    - name: insatll java
+      command: apt-get install fontconfig openjdk-11-jre -y
       
       
