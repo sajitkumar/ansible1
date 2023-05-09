@@ -1,0 +1,20 @@
+- name: Update SSH configuration
+  hosts: all
+  become: true
+  tasks:
+    - name: Enable password authentication
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: 'PasswordAuthentication no'
+        line: 'PasswordAuthentication yes'
+        state: present
+    - name: start sshd
+      systemd:
+        name: sshd
+        service: reloaded
+    - name: create a directory
+      command: mkdir /opt/jenkins
+    - name: give permission to jenkins
+      command: chmod 777 /opt/jenkins
+      
+      
