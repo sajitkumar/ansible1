@@ -2,7 +2,8 @@
   hosts: all
   become: true
   tasks:
-    - name: apt update
+    - name: update system
+      command: apt update
     - name: make directory
       command: /opt/jenkins
     - name: give permission
