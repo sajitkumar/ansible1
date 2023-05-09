@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    parameters{
+        choice(name: 'PLAYBOOK', choices: ['jenkins.yml'], description: 'select the palybook to execute')
+    }    
     stages{
         stage('SCM Checkout'){
             steps{
@@ -8,7 +11,7 @@ pipeline{
         }
         stage('Execute playbook on node2'){
             steps{
-                ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'jenkins.yml' 
+                ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: "${params.PLAYBOOK}"
             } 
         }    
     }
