@@ -11,7 +11,7 @@ pipeline{
         }
         stage('Execute playbook on node2'){
             steps{
-                ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: "${params.PLAYBOOK}"
+                ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: "${params.PLAYBOOK}
             } 
         }    
     }
