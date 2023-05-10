@@ -17,8 +17,7 @@ pipeline{
         }   
         stage('login'){
             steps{
-                echo "${params.NAME}"
-                echo "${params.PASSWORD}"
+                echo "${params.NAME},${params.PASSWORD}"
             }    
         }
     }
