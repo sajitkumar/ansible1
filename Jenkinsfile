@@ -2,7 +2,7 @@ pipeline{
     agent any
     parameters{
         string(name: 'NAME', defaultValue: '', description: 'enter your name')
-        string(password:'PASSWORD', defaultValue: '', description: 'enter your password')
+        string(name: 'PASSWORD', defaultValue: '', description: 'enter your password')
     }    
     stages{
         stage('SCM Checkout'){
