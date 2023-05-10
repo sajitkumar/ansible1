@@ -8,6 +8,8 @@ pipeline{
              when{
                  expression{
                      params.branch == "main"
+                 }
+             }    
             steps{
                 git branch:'main', url: 'https://github.com/sajitkumar/ansible1.git'
             }
