@@ -1,8 +1,8 @@
 pipeline{
     agent any
     parameters{
-        string(name: 'NAME', defaultValue: '', description: 'enter your name')
-        string(name: 'PASSWORD', defaultValue: '', description: 'enter your password')
+        string(name: 'NAME', defaultValue: 'ubuntu', description: 'enter your name')
+        string(name: 'PASSWORD', defaultValue: 'ubuntu', description: 'enter your password')
     }    
     stages{
         stage('SCM Checkout'){
@@ -12,7 +12,7 @@ pipeline{
         }
         stage('Execute playbook on node2'){
             steps{
-                ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'slave.yml'
+                ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'slave.yml'
             }
         }   
         stage('login'){
