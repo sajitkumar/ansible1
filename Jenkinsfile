@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('login'){
             steps{
-              "${params.name},${params.password}"
+              echo "${params.name},${params.password}"
             }    
         }
          stage('SCM Checkout'){
