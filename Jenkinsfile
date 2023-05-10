@@ -1,24 +1,16 @@
 pipeline{
     agent any
     parameters{
-        string defaultValue: 'ubuntu', description: 'enter your name', name: 'name'
-        password defaultValue: 'ubuntu', description: 'enter your password', name: 'password'
+        choice(name: 'branch', choices: ['main'], description: ' ')
     }    
     stages{
-        stage('login'){
-            steps{
-              echo "${params.name},${params.password}"
-            }    
-        }
          stage('SCM Checkout'){
+             when{
+                 expression{
+                     params.branch == "main"
             steps{
                 git branch:'main', url: 'https://github.com/sajitkumar/ansible1.git'
             }
-        }
-        stage('Execute playbook on node2'){
-            steps{
-                ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'slave.yml'
-            }
-        }  
+         }
     }
 }
