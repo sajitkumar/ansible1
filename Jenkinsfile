@@ -2,7 +2,7 @@ pipeline{
     agent any
     parameters{
         string defaultValue: 'ubuntu', description: 'enter your name', name: 'name'
-        string defaultValue: 'ubuntu', description: 'enter your password', name: 'password'
+        password defaultValue: 'ubuntu', description: 'enter your password', name: 'password'
     }    
     stages{
         stage('login'){
