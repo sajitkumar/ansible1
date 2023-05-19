@@ -4,6 +4,6 @@
   become: yes
   tasks: 
   - name: install nginx
-    apt:
+    yum:
       name: nginx
       state: present
