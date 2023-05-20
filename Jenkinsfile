@@ -10,7 +10,7 @@ pipeline {
         }
         stage('execute playbook'){
             steps{
-                ansiblePlaybook credentialsId: 'ansible1', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'ngin.yml'
+                ansiblePlaybook credentialsId: 'ansible1', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'nginx.yml'
                 
             } 
         }
