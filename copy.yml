@@ -3,7 +3,6 @@
   hosts: all
   become: yes
   tasks: 
-  - name: install nginx
     - name: Copy a file to remote hosts
       copy:
         src: copy.txt
