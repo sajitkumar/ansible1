@@ -1,9 +1,0 @@
----
-- name: nginx install
-  hosts: all
-  become: yes
-  tasks: 
-    - name: Copy a file to remote hosts
-      copy:
-        src: copy.txt
-        dest: /opt
