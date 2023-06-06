@@ -3,5 +3,5 @@
   hosts: 13.127.192.54
   tasks: 
     - name: create nginx container 
-      command: docker run -d --name nginx5 -p 85:80 sajitkumar/nginxdevops
+      command: docker run -d --name nginx6 -p 90:80 sajitkumar/nginxdevops
        
