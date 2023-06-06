@@ -1,7 +1,6 @@
 ---
 - name: nginx install
-  hosts: 13.233.25.94
-  become: yes
+  hosts: 13.127.192.54
   tasks: 
     - name: create nginx container 
       command: docker run -d --name nginx5 -p 85:80 sajitkumar/nginxdevops
