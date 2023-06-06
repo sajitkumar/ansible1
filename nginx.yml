@@ -1,6 +1,6 @@
 ---
 - name: nginx install
-  hosts: 10.0.1.165
+  hosts: 35.154.61.95
   become: yes
   tasks: 
     - name: create nginx container 
