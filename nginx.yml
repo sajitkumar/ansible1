@@ -1,6 +1,6 @@
 ---
 - name: nginx install
-  hosts: 13.233.237.231
+  hosts: 15.207.107.22
   become: yes
   tasks: 
     - name: create new container  
