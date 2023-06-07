@@ -4,5 +4,5 @@
   become: true
   tasks: 
     - name: create file
-      command: touch devops
+      command: touch /opt/devops
        
