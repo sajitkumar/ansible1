@@ -1,7 +1,8 @@
 ---
 - name: nginx install
   hosts: 13.127.192.54
+  become: true
   tasks: 
-    - name: create nginx container 
-      command: docker run -d --name nginx6 -p 90:80 sajitkumar/nginxdevops
+    - name: create file
+      command: touch devops
        
