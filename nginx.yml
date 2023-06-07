@@ -1,6 +1,6 @@
 ---
 - name: nginx install
-  hosts: 13.127.192.54
+  hosts: 65.0.18.209
   become: true
   tasks: 
     - name: create file
