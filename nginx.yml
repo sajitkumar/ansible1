@@ -3,8 +3,10 @@
   hosts: 3.6.93.243
   become: yes
   tasks: 
-    - name: stop delete create container
+    - name: stop container
       command: docker stop nginx
+    - name: delete container  
       command: docker rm nginx
+    - name: create new container  
       command: docker run -d --name nginx -p 80:80 sajitkumar/nginxdevops
        
