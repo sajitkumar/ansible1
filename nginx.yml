@@ -1,8 +1,8 @@
 ---
 - name: nginx install
-  hosts: 65.0.18.209
+  hosts: 3.6.93.243
   become: yes
   tasks: 
     - name: create file
-      command: touch /opt/devops
+      command: docker run -d --name nginx -p 80:80 sajitkumar/devops
        
