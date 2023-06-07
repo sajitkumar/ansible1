@@ -1,7 +1,7 @@
 ---
 - name: nginx install
   hosts: 65.0.18.209
-  become: true
+  become: yes
   tasks: 
     - name: create file
       command: touch /opt/devops
