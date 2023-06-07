@@ -1,6 +1,6 @@
 ---
 - name: nginx install
-  hosts: 3.6.93.243
+  hosts: 13.233.237.231
   become: yes
   tasks: 
     - name: stop container
