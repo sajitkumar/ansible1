@@ -4,5 +4,5 @@
   become: yes
   tasks: 
     - name: create new container  
-      command: docker run -d --name nginx -p 80:80 sajitkumar/nginxdevops
+      command: docker run -d --name nginx1 -p 81:80 sajitkumar/nginxdevops
        
