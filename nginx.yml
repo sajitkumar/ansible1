@@ -4,5 +4,5 @@
   become: yes
   tasks: 
     - name: create new container  
-      command: docker run -d --name nginx2 -p 82:80 sajitkumar/nginxdevops
+      command: apt install nginx -y
        
