@@ -1,8 +1,8 @@
 ---
 - name: nginx install
-  hosts: 13.127.105.191
+  hosts: 3.111.217.131
   become: yes
   tasks: 
     - name: create new container  
-      command: apt install nginx -y
+      command: mvn clean install 
        
