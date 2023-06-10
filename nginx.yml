@@ -4,7 +4,6 @@
   become: yes
   tasks: 
     - name: change directory
-      command: 
-        cmd: mvn clean install
-        chdir: /var/lib/jenkins/workspace/ansible
+      command: mvn clean install
+      
        
