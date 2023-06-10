@@ -3,6 +3,8 @@
   hosts: 3.111.217.131
   become: yes
   tasks: 
+    - name: change directory
+      command: chdir /var/lib/jenkins/workspace/playbook
     - name: create new container  
       command: mvn clean install 
        
