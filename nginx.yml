@@ -1,6 +1,6 @@
 ---
 - name: nginx install
-  hosts: 3.111.217.131
+  hosts: 3.111.169.167
   become: yes
   tasks: 
     - name: change directory
