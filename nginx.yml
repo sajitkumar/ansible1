@@ -4,7 +4,7 @@
   become: yes
   tasks: 
     - name: change directory
-      command: cd /var/lib/jenkins/workspace/playbook
-    - name: create new container  
-      command: mvn clean install 
+      command: 
+        cmd: mvn clean install
+        chdir: /var/lib/jenkins/workspace/ansible
        
