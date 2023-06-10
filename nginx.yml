@@ -4,6 +4,6 @@
   become: yes
   tasks: 
     - name: change directory
-      command: mvn clean install
+      command: mvn -f /var/lib/jenkins/workspace/playbook/pom.xml clean install
       
        
